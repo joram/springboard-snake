@@ -2,4 +2,4 @@
 
 source scripts/common
 
-run_in_python_container "cd src && python -m gunicorn.app.wsgiapp -c ../settings/gunicorn.py app:app"
+run_in_python_container "cd src && python -m gunicorn.app.wsgiapp -c ../settings/gunicorn.py --reload app:app"

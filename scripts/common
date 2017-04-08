@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 function run_in_python_container () {
-    docker run -it --rm \
+    docker run -it --rm --network battlesnake.local \
+        --name springboard-snake \
         -v "$PWD":/usr/app \
         -w /usr/app \
         -e PYTHONPATH='/usr/app/.packages' \
