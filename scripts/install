@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#? Build app container
+
+source scripts/common
+
+if [ $# -ne 0 ]
+then
+    run_in_python_container "pip install -t .packages $@ && pip freeze --local > requirements.txt"
+else
+    run_in_python_container "pip install -t .packages -r requirements.txt"
+fi

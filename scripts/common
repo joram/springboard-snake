@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+function run_in_python_container () {
+    docker run -it --rm \
+        -v "$PWD":/usr/app \
+        -w /usr/app \
+        -e PYTHONPATH='/usr/app/.packages' \
+        -p 5000:5000 \
+        python:2.7-slim \
+        /bin/sh -c "$@"
+}

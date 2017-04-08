@@ -1,0 +1,9 @@
+# Python things
+*.pyc
+
+# Dev env things
+scripts/.*
+.packages
+
+# Editor things
+.vscode
