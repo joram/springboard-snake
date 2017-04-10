@@ -1,6 +1,11 @@
+from utils import *
+
 
 def move(params):
+    direction = to_food(params)
+    print direction
+
     return {
-        "move": ["up", "left", "down", "right"][params['turn'] % 4],
+        "move": direction_string(direction),
         "taunt": "taunt!"
     }

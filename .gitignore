@@ -7,3 +7,4 @@ scripts/.*
 
 # Editor things
 .vscode
+.idea*
